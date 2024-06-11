@@ -1,3 +1,14 @@
+/* Color Palette */
+:root {
+  --ebony-clay: #1e3238;
+  --fiord: #44576d;
+  --valhallaBlue: #111423;
+  --slate-gray: #768a96;
+  --pigeon-post: #aac7d8;
+  --link-water: #dfebf6;
+  --mercury: #e6e6e6;
+}
+
 .container {
   flex: 1;
   display: flex;
@@ -8,10 +19,7 @@
 .chatRoot {
   flex: 1;
   display: flex;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 0px 20px 20px 20px;
   gap: 5px;
 }
 
@@ -20,7 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: radial-gradient(108.78% 108.78% at 50.02% 19.78%, #ffffff 57.29%, #eef6fe 100%);
+  background: radial-gradient(108.78% 108.78% at 50.02% 19.78%, var(--valhallaBlue) 57.29%, var(--ebony-clay) 100%);
   box-shadow:
     0px 2px 4px rgba(0, 0, 0, 0.14),
     0px 0px 2px rgba(0, 0, 0, 0.12);
@@ -58,7 +66,7 @@
   align-items: flex-end;
   text-align: center;
   letter-spacing: -0.01em;
-  color: #616161;
+  color: var(--slate-gray);
 }
 
 .chatIcon {
@@ -71,8 +79,7 @@
   max-width: 1028px;
   width: 100%;
   overflow-y: auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   margin-top: 24px;
@@ -87,7 +94,7 @@
 .chatMessageUserMessage {
   display: flex;
   padding: 20px;
-  background: #edf5fd;
+  background: var(--link-water);
   border-radius: 8px;
   box-shadow:
     0px 2px 4px rgba(0, 0, 0, 0.14),
@@ -139,62 +146,33 @@
 .chatInput {
   position: sticky;
   flex: 0 0 100px;
-  padding-top: 12px;
-  padding-bottom: 24px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 12px 24px 24px 24px;
   width: calc(100% - 100px);
   max-width: 1028px;
-  margin-bottom: 50px;
-  margin-top: 8px;
+  margin: 8px 0 50px 0;
+}
+
+.clearChatBroom, .clearChatBroomNoCosmos, .newChatIcon {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 7px;
+  color: #ffffff;
+  border-radius: 4px;
+  z-index: 1;
 }
 
 .clearChatBroom {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 7px;
   top: 13px;
-  color: #ffffff;
-  border-radius: 4px;
-  z-index: 1;
 }
 
-.clearChatBroomNoCosmos {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 7px;
+.clearChatBroomNoCosmos, .newChatIcon {
   top: 66px;
-  color: #ffffff;
-  border-radius: 4px;
-  z-index: 1;
-}
-
-.newChatIcon {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 7px;
-  top: 66px;
-  color: #ffffff;
-  border-radius: 4px;
-  z-index: 1;
 }
 
 .stopGeneratingContainer {
@@ -208,9 +186,9 @@
   position: absolute;
   width: 161px;
   height: 32px;
-  left: calc(50% - 161px / 2 + 25.8px);
+  left: calc(50% - 80.5px + 25.8px);
   bottom: 116px;
-  border: 1px solid #d1d1d1;
+  border: 1px solid var(--mercury);
   border-radius: 16px;
 }
 
@@ -239,7 +217,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 16px 16px;
+  padding: 16px;
   gap: 8px;
   background: #ffffff;
   box-shadow:
@@ -277,7 +255,7 @@
 }
 
 .citationPanelDismiss:hover {
-  background-color: #d1d1d1;
+  background-color: var(--mercury);
   cursor: pointer;
 }
 
@@ -287,8 +265,7 @@
   font-size: 16px;
   line-height: 22px;
   color: #323130;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin: 12px 0;
 }
 
 .citationPanelTitle:hover {
@@ -351,7 +328,7 @@ a {
   align-items: center;
   padding: 4px 6px;
   gap: 4px;
-  border: 1px solid #d1d1d1;
+  border: 1px solid var(--mercury);
   border-radius: 4px;
 }
 
@@ -366,15 +343,7 @@ a {
     max-width: 90%;
   }
 
-  .newChatIcon {
-    left: 0px;
-  }
-
-  .clearChatBroom {
-    left: 0px;
-  }
-
-  .clearChatBroomNoCosmos {
+  .newChatIcon, .clearChatBroom, .clearChatBroomNoCosmos {
     left: 0px;
   }
 

@@ -1,3 +1,12 @@
+:root {
+  --ebony-clay: #1e3238;
+  --fiord: #44576d;
+  --slate-gray: #768a96;
+  --pigeon-post: #aac7d8;
+  --link-water: #dfebf6;
+  --mercury: #e6e6e6;
+}
+
 .answerContainer {
   display: flex;
   flex-direction: column;
@@ -16,7 +25,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: #323130;
+  color: var(--ebony-clay);
   flex: none;
   order: 1;
   align-self: stretch;
@@ -51,18 +60,17 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-
   display: flex;
   align-items: center;
   text-align: center;
-  color: #707070;
+  color: var(--slate-gray);
   flex: none;
   order: 1;
   flex-grow: 0;
 }
 
 .citationWrapper {
-  margin-top: 8;
+  margin-top: 8px;
   display: flex;
   flex-flow: wrap column;
   max-height: 150px;
@@ -75,14 +83,13 @@
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
-
-  color: #115ea3;
+  color: var(--link-water);
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 4px 6px;
   gap: 4px;
-  border: 1px solid #d1d1d1;
+  border: 1px solid var(--mercury);
   border-radius: 4px;
 }
 
@@ -100,7 +107,7 @@
   padding: 0px;
   width: 14px;
   height: 14px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--mercury);
   border-radius: 4px;
   flex: none;
   flex-grow: 0;
@@ -110,7 +117,7 @@
   font-size: 10px;
   line-height: 14px;
   text-align: center;
-  color: #424242;
+  color: var(--ebony-clay);
   cursor: pointer;
 }
 
@@ -126,7 +133,7 @@
   align-items: center;
   padding: 0px;
   margin-top: 4px;
-  color: #616161;
+  color: var(--slate-gray);
   font-size: 10px;
 }
 
@@ -143,7 +150,7 @@
   line-height: 16px;
   display: flex;
   align-items: center;
-  color: #616161;
+  color: var(--slate-gray);
 }
 
 .accordionTitle:hover {
@@ -159,7 +166,7 @@
   padding: 0px;
   width: 14px;
   height: 14px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--mercury);
   border-radius: 4px;
   flex: none;
   order: 2;
@@ -170,7 +177,7 @@
   font-size: 10px;
   line-height: 14px;
   text-align: center;
-  color: #424242;
+  color: var(--ebony-clay);
   cursor: pointer;
 }
 

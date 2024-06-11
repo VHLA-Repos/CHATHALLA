@@ -1,3 +1,12 @@
+:root {
+  --ebony-clay: #1e3238;
+  --fiord: #44576d;
+  --slate-gray: #768a96;
+  --pigeon-post: #aac7d8;
+  --link-water: #dfebf6;
+  --mercury: #e6e6e6;
+}
+
 .container {
   max-height: calc(100vh - 100px);
   width: 300px;
@@ -22,7 +31,7 @@
 }
 
 .itemCell:hover {
-  background: #e6e6e6;
+  background: var(--mercury);
 }
 
 .itemButton {
@@ -31,7 +40,7 @@
   align-items: center;
   width: 28px;
   height: 28px;
-  border: 1px solid #d1d1d1;
+  border: 1px solid var(--slate-gray);
   border-radius: 5px;
   background-color: white;
   margin: auto 2.5px;
@@ -39,7 +48,7 @@
 }
 
 .itemButton:hover {
-  background-color: #e6e6e6;
+  background-color: var(--mercury);
 }
 
 .chatGroup {
